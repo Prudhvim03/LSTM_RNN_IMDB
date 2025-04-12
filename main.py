@@ -13,7 +13,7 @@ word_index = imdb.get_word_index()
 reverse_word_index = {value: key for key, value in word_index.items()}
 
 # Step 3: Load the trained LSTM model
-model = load_model('lstm_rnn_imdb.h5')  # Make sure this path matches your actual model file
+model = load_model('lstm_rnn_imdb.h5')
 max_len = 500  # Length used during training
 
 # Step 4: Helper Functions
