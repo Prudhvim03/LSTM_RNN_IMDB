@@ -32,9 +32,9 @@ def predict_sentiment(review):
 # Step 5: Streamlit UI
 st.set_page_config(page_title="IMDB Sentiment Analyzer (LSTM)", layout="centered")
 
-st.title("🎬 IMDB Movie Review Sentiment Analysis")
-st.subheader("Using LSTM Recurrent Neural Network (RNN)")
-st.write("This app classifies your movie review as **Positive** or **Negative** sentiment based on an LSTM model.")
+st.title("🎬 Movie Review Sentiment Analyzer")
+st.subheader("Our AI reads your movie review... will it sell out or flop? let's see the verdict! 🎥")
+st.write("Drop your movie review here our LSTM model will tell you if it's a **thumbs up** or **thumbs down**!")
 
 # Review input
 user_input = st.text_area("📝 Enter a movie review:", height=150, placeholder="E.g., 'This movie was amazing and full of emotion.'")
