@@ -40,16 +40,18 @@ st.write("This app classifies your movie review as **Positive** or **Negative** 
 user_input = st.text_area("📝 Enter a movie review:", height=150, placeholder="E.g., 'This movie was amazing and full of emotion.'")
 
 # Classification
-if st.button("🚀 Classify Sentiment"):
+if st.button(" Classify Sentiment"):
     if user_input.strip():
         sentiment, score = predict_sentiment(user_input)
         
         if sentiment == 'Positive':
-            st.markdown(f"<h3 style='color:green;'>✅ Sentiment: {sentiment}</h3>", unsafe_allow_html=True)
+            st.markdown(f"<h3 style='color:green;'>🎉 Sentiment: {sentiment}</h3>", unsafe_allow_html=True)
+            st.success("🎟️ Lights, camera, action! Grab your tickets now Secure your seat before it sells out! 🍿")
         else:
-            st.markdown(f"<h3 style='color:red;'>❌ Sentiment: {sentiment}</h3>", unsafe_allow_html=True)
+            st.markdown(f"<h3 style='color:red;'>😞  Sentiment: {sentiment}</h3>", unsafe_allow_html=True)
+            st.warning("💬 Save your popcorn for another time ... maybe next one? 💔.")
         
-        st.markdown(f"<h4 style='color:gray;'>📊 Confidence Score: {score:.2f}</h4>", unsafe_allow_html=True)
+        st.markdown(f"<h4 style='color:black;'>📈 Confidence Score: {score:.2f}</h4>", unsafe_allow_html=True)
     else:
         st.warning("⚠️ Please enter a valid review before classifying.")
 else:
